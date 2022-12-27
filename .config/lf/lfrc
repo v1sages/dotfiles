@@ -63,7 +63,8 @@ map R reload
 map mf mkfile
 map md mkdir
 map C clear
-#map bg setwallpaper
+map bg setwallpaper
+map f $vi $(fzf)
 #map <enter> open
 
 # Movement
