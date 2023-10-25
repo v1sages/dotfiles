@@ -66,7 +66,7 @@ map <C-l> <C-W>l
 autocmd Filetype tex setl updatetime=3
 let g:livepreview_previewer = 'zathura'
 " let g:vimtex_view_method = 'zathura'
+" The_Viking_Programmer plugin-less preview method for LaTeX PDF Live Preview
 map I :! pdflatex %<CR><CR>
 map S :! zathura $(echo % \| sed 's/tex$/pdf/') & disown<CR>
-
 
