@@ -18,7 +18,7 @@ set ignorecase	           " Ignore case in search
 
 set autoindent             " Indent according to previous line.
 " set expandtab              " Use spaces instead of tabs.
-set tabstop = 4		   " Tab key indents by 4 spaces
+set tabstop =4		   " Tab key indents by 4 spaces
 set softtabstop =4         " Soft Tab indents by 4 spaces.
 set shiftwidth  =4         " >> indents by 4 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
@@ -30,7 +30,7 @@ set display     =lastline  " Show as much as possible of the last line.
 
 set showmode               " Show current mode in command-line.
 set showcmd                " Show already typed keys when more are expected.
-set termguicolors	   " show gui colors
+" set termguicolors	   " show gui colors
 
 set incsearch              " Highlight while searching with / or ?.
 set hlsearch               " Highlight all results.
