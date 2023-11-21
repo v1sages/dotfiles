@@ -18,7 +18,8 @@ set ignorecase	           " Ignore case in search
 
 set autoindent             " Indent according to previous line.
 " set expandtab              " Use spaces instead of tabs.
-set softtabstop =4         " Tab key indents by 4 spaces.
+set tabstop = 4		   " Tab key indents by 4 spaces
+set softtabstop =4         " Soft Tab indents by 4 spaces.
 set shiftwidth  =4         " >> indents by 4 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
 
@@ -29,6 +30,7 @@ set display     =lastline  " Show as much as possible of the last line.
 
 set showmode               " Show current mode in command-line.
 set showcmd                " Show already typed keys when more are expected.
+set termguicolors	   " show gui colors
 
 set incsearch              " Highlight while searching with / or ?.
 set hlsearch               " Highlight all results.
@@ -56,16 +58,19 @@ noremap _ m`O<Esc>``
 " Set Ctrl + D/U to go up and down, with the cursor centered 
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
+
+" Color stuff and mouse nav from Tim Unkert 
+" Add an 80-char colored column, to tell us if our code is too wide
+nnoremap <Leader>cc :set colorcolumn=80<cr>
+nnoremap <Leader>ncc :set colorcolumn-=80<cr>
+" Let mouse navigate between tabs
+set mouse=a
 " User <ctrl>+h/j/k/l to switch panes when in :vsp or other Vim Splits
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" vim-latex-live-preview settings
-autocmd Filetype tex setl updatetime=3
-let g:livepreview_previewer = 'zathura'
-" let g:vimtex_view_method = 'zathura'
 " The_Viking_Programmer plugin-less preview method for LaTeX PDF Live Preview
 map I :! pdflatex %<CR><CR>
 map S :! zathura $(echo % \| sed 's/tex$/pdf/') & disown<CR>
