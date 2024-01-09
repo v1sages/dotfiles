@@ -74,6 +74,9 @@ floating_modifier $mod
 # toggle swapping workspaces quickly
 bindsym $mod+Tab workspace back_and_forth
 
+# toggle  g r a y s c a l e - https://github.com/bubbleguuum/toggle-monitor-grayscale 
+bindsym $mod+Shift+g exec .local/bin/grayscale
+
 # switch to workspace
 bindsym $mod+1    workspace  $ws1
 bindsym $mod+2    workspace  $ws2
