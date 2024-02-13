@@ -56,7 +56,7 @@ gaps outer 3
 # bindsym Mod4+l exec i3lock-fancy-multimonitor -p
 
 # Suspend
-bindsym $mod+Shift+period exec i3lock-fancy-multimonitor -p && systemctl suspend
+bindsym $mod+Shift+period exec ~/.screenlayout/default.sh && exec i3lock-fancy-multimonitor -p && systemctl suspend
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -201,7 +201,7 @@ bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 # lock by blurring the screen:
 # bindsym mod4+l exec ~/.config/i3/scripts/blur-lock
 #bindsym mod4+l exec i3lock-fancy-multimonitor -p
-bindsym mod4+l exec /usr/bin/slock
+bindsym mod4+l --release exec slock
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
